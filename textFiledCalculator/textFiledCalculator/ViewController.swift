@@ -37,5 +37,13 @@ class ViewController: UIViewController {
             return nil
         }
     }
+
+
+        enum Operators: String {
+    case add = "+"
+    case sub = "-"
+            case mul = "*"
+    case dev = "/"
+        }
 }
 
