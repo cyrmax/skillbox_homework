@@ -3,28 +3,28 @@ import UIKit
 class ViewController: UIViewController {
 
     let inputTF: UITextField = {
-let tf = UITextField()
+        let tf = UITextField()
         tf.placeholder = "Enter data here"
         tf.adjustsFontSizeToFitWidth = true
         tf.translatesAutoresizingMaskIntoConstraints = false
-return tf
+        return tf
     }()
     let resultLabel: UILabel = {
-let label = UILabel()
+        let label = UILabel()
         label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = ""
-return label
+        return label
     }()
     let button: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Perform", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-return button
+        return button
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-setConstraints()
+        setConstraints()
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         view.backgroundColor = .gray
     }
