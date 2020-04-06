@@ -5,8 +5,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var leftOperandTF: UITextField!
     @IBOutlet weak var operationTF: UITextField!
     @IBOutlet weak var rightOperandTF: UITextField!
-    
-    @IBAction func calculatePressed(_ sender: UIButton) {
+
+    @IBAction func calculatePressed() {
         guard let left = Double(leftOperandTF.text!), let right = Double(rightOperandTF.text!), let operationText = operationTF.text else {
             resultLabel.text = "Incorrect input"
             return
@@ -17,13 +17,13 @@ class ViewController: UIViewController {
         }
         resultLabel.text = operation.apply(left, right).description
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
-    
+
+
     enum Operators: String {
         case add = "+"
         case sub = "-"
