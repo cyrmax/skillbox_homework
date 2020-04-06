@@ -13,6 +13,7 @@ return tf
 let label = UILabel()
         label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = ""
 return label
     }()
     let button: UIButton = {
@@ -25,6 +26,7 @@ return button
         super.viewDidLoad()
 setConstraints()
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        view.backgroundColor = .gray
     }
 
     @objc func buttonAction() {
@@ -32,6 +34,7 @@ setConstraints()
         if !text.isEmpty {
             resultLabel.text = text + " " + resultLabel.text!
         }
+        inputTF.text = ""
     }
 
     func setConstraints() {
