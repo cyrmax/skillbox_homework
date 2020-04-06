@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		EDDAC0132438B27E00C3C44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAC0122438B27E00C3C44A /* AppDelegate.swift */; };
 		EDDAC0152438B27E00C3C44A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAC0142438B27E00C3C44A /* SceneDelegate.swift */; };
-		EDDAC0172438B27E00C3C44A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAC0162438B27E00C3C44A /* ViewController.swift */; };
 		EDDAC01C2438B28400C3C44A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDAC01B2438B28400C3C44A /* Assets.xcassets */; };
 		EDDAC01F2438B28400C3C44A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDAC01D2438B28400C3C44A /* LaunchScreen.storyboard */; };
+		EDDAC0272438B3D400C3C44A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAC0262438B3D400C3C44A /* MainViewController.swift */; };
+		EDDAC0292438B4CE00C3C44A /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAC0282438B4CE00C3C44A /* FirstTabViewController.swift */; };
+		EDDAC02B2438B5DC00C3C44A /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAC02A2438B5DC00C3C44A /* SecondTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EDDAC00F2438B27E00C3C44A /* module7tabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = module7tabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDAC0122438B27E00C3C44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDDAC0142438B27E00C3C44A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EDDAC0162438B27E00C3C44A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDDAC01B2438B28400C3C44A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDDAC01E2438B28400C3C44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDDAC0202438B28400C3C44A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDDAC0262438B3D400C3C44A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EDDAC0282438B4CE00C3C44A /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
+		EDDAC02A2438B5DC00C3C44A /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 			children = (
 				EDDAC0122438B27E00C3C44A /* AppDelegate.swift */,
 				EDDAC0142438B27E00C3C44A /* SceneDelegate.swift */,
-				EDDAC0162438B27E00C3C44A /* ViewController.swift */,
+				EDDAC0262438B3D400C3C44A /* MainViewController.swift */,
+				EDDAC0282438B4CE00C3C44A /* FirstTabViewController.swift */,
+				EDDAC02A2438B5DC00C3C44A /* SecondTabViewController.swift */,
 				EDDAC01B2438B28400C3C44A /* Assets.xcassets */,
 				EDDAC01D2438B28400C3C44A /* LaunchScreen.storyboard */,
 				EDDAC0202438B28400C3C44A /* Info.plist */,
@@ -134,9 +140,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDDAC0172438B27E00C3C44A /* ViewController.swift in Sources */,
 				EDDAC0132438B27E00C3C44A /* AppDelegate.swift in Sources */,
+				EDDAC02B2438B5DC00C3C44A /* SecondTabViewController.swift in Sources */,
+				EDDAC0292438B4CE00C3C44A /* FirstTabViewController.swift in Sources */,
 				EDDAC0152438B27E00C3C44A /* SceneDelegate.swift in Sources */,
+				EDDAC0272438B3D400C3C44A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
