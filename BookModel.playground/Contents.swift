@@ -8,7 +8,6 @@ extension NSEntityDescription {
     }
 }
 
-
 extension NSEntityDescription {
     convenience init(from className: AnyClass) {
         self.init()
@@ -40,3 +39,43 @@ extension NSRelationshipDescription {
 }
 
 
+@objc(AuthorMO)
+public class AuthorMO: NSManagedObject {
+    @NSManaged var firstname: String?
+    @NSManaged var lastname: String?
+    @NSManaged var nickname: String?
+    @NSManaged var email: String?
+
+    static private var _entityDescription: NSEntityDescription?
+    static func entityDescription() -> NSEntityDescription {
+        if let _ = self._entityDescription {
+            return self._entityDescription!
+        }
+let des = NSEntityDescription(from: self)
+        des.addProperty(NSAttributeDescription(name: "firstname", type: .stringAttributeType, isOptional: true))
+        des.addProperty(NSAttributeDescription(name: "lastname", type: .stringAttributeType, isOptional: true))
+        des.addProperty(NSAttributeDescription(name: "nickname", type: .stringAttributeType, isOptional: true))
+        des.addProperty(NSAttributeDescription(name: "email", type: .stringAttributeType, isOptional: true))
+        self._entityDescription = des
+        return self._entityDescription!
+    }
+}
+
+
+@objc(GenreMO)
+public class GenreMO: NSManagedObject {
+    @NSManaged var name: String
+    @NSManaged var match: Int
+
+        static private var _entityDescription: NSEntityDescription?
+        static func entityDescription() -> NSEntityDescription {
+            if let _ = self._entityDescription {
+                return self._entityDescription!
+            }
+    let des = NSEntityDescription(from: self)
+            des.addProperty(NSAttributeDescription(name: "name", type: .stringAttributeType))
+            des.addProperty(NSAttributeDescription(name: "match", type: .integer16AttributeType))
+            self._entityDescription = des
+            return self._entityDescription!
+        }
+}
