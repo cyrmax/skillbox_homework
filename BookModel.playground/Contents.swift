@@ -79,3 +79,4 @@ public class GenreMO: NSManagedObject {
             return self._entityDescription!
         }
 }
+
