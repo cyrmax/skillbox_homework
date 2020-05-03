@@ -5,7 +5,10 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-let controllers = [FirstTabViewController(), SecondTabViewController()]
+var controllers = [UIViewController]()
+let firstNav = UINavigationController(rootViewController: FirstTabViewController())
+        controllers.append(firstNav)
+        controllers.append(SecondTabViewController())
         viewControllers = controllers
     }
 }
