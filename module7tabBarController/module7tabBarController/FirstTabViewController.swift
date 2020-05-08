@@ -27,6 +27,7 @@ let stack = UIStackView()
         stack.axis = .vertical
         stack.alignment = .fill
         stack.distribution = .fillEqually
+        stack.translatesAutoresizingMaskIntoConstraints = false
 return stack
     }()
 
@@ -50,12 +51,19 @@ present(BlueController(), animated:  true)
     }
 
     func setupGraphics() {
-        buttonsStack.addSubview(greenButton)
-        buttonsStack.addSubview(blueButton)
-        buttonsStack.addSubview(redButton)
+        buttonsStack.addArrangedSubview(greenButton)
+        buttonsStack.addArrangedSubview(blueButton)
+        buttonsStack.addArrangedSubview(redButton)
+        greenButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        greenButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        blueButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        blueButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        redButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        redButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         view.addSubview(buttonsStack)
-        buttonsStack.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+        buttonsStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
         buttonsStack.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        buttonsStack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30).isActive = true
         buttonsStack.widthAnchor.constraint(equalToConstant: 60).isActive = true
     }
 }
