@@ -47,7 +47,7 @@ present(BlueController(), animated:  true)
     }
 
     @objc func showRed() {
-        present(BlueController(), animated: true)
+        present(RedController(), animated: true)
     }
 
     func setupGraphics() {

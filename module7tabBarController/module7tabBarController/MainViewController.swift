@@ -6,7 +6,9 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 var controllers = [UIViewController]()
-let firstNav = UINavigationController(rootViewController: FirstTabViewController())
+let firstTab = FirstTabViewController()
+let firstNav = UINavigationController(rootViewController: firstTab)
+        firstNav.setNavigationBarHidden(false, animated: true)
         firstNav.tabBarItem = UITabBarItem(title: "First", image: nil, tag: 0)
         controllers.append(firstNav)
         controllers.append(SecondTabViewController())
