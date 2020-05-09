@@ -39,15 +39,15 @@ setupGraphics()
     }
 
     @objc func showGreen() {
-present(GreenController(), animated:  true)
+show(GreenController(), sender: self)
     }
 
     @objc func showBlue() {
-present(BlueController(), animated:  true)
+show(BlueController(), sender: self)
     }
 
     @objc func showRed() {
-        present(RedController(), animated: true)
+        show(RedController(), sender: self)
     }
 
     func setupGraphics() {
