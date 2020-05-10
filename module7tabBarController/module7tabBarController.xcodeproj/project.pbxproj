@@ -17,6 +17,7 @@
 		EDDAC0272438B3D400C3C44A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAC0262438B3D400C3C44A /* MainViewController.swift */; };
 		EDDAC0292438B4CE00C3C44A /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAC0282438B4CE00C3C44A /* FirstTabViewController.swift */; };
 		EDDAC02B2438B5DC00C3C44A /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAC02A2438B5DC00C3C44A /* SecondTabViewController.swift */; };
+		EDE14A2224681D3B0041DDDC /* SecondInternalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE14A2124681D3B0041DDDC /* SecondInternalController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EDDAC0262438B3D400C3C44A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EDDAC0282438B4CE00C3C44A /* FirstTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
 		EDDAC02A2438B5DC00C3C44A /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
+		EDE14A2124681D3B0041DDDC /* SecondInternalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondInternalController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				ED854B02245F347E001D21C5 /* BlueController.swift */,
 				ED854B04245F34AD001D21C5 /* RedController.swift */,
 				EDDAC02A2438B5DC00C3C44A /* SecondTabViewController.swift */,
+				EDE14A2124681D3B0041DDDC /* SecondInternalController.swift */,
 				EDDAC01B2438B28400C3C44A /* Assets.xcassets */,
 				EDDAC01D2438B28400C3C44A /* LaunchScreen.storyboard */,
 				EDDAC0202438B28400C3C44A /* Info.plist */,
@@ -155,6 +158,7 @@
 				EDDAC02B2438B5DC00C3C44A /* SecondTabViewController.swift in Sources */,
 				EDDAC0292438B4CE00C3C44A /* FirstTabViewController.swift in Sources */,
 				ED854B05245F34AD001D21C5 /* RedController.swift in Sources */,
+				EDE14A2224681D3B0041DDDC /* SecondInternalController.swift in Sources */,
 				EDDAC0152438B27E00C3C44A /* SceneDelegate.swift in Sources */,
 				EDDAC0272438B3D400C3C44A /* MainViewController.swift in Sources */,
 			);
