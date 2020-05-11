@@ -1,13 +1,12 @@
 import UIKit
 
 class SecondInternalController: UIViewController {
-    var delegate: ColorDelegate?
+    weak var delegate: ColorDelegate?
     let redButton: UIButton = {
 let button = UIButton()
         button.setTitle("Red", for: .normal)
 return button
-    }
-()
+    }()
 
     let greenButton: UIButton = {
         let button = UIButton()
@@ -21,12 +20,33 @@ let button = UIButton()
 return button
     }()
 
+    let stack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.alignment = .fill
+        stack.distribution = .fillEqually
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
-        redButton.addTarget(self, action: #selector(setRed), for: .touchUpInside)
-        greenButton.addTarget(self, action: #selector(setGreen), for: .touchUpInside)
-        blueButton.addTarget(self, action: #selector(setBlue), for: .touchUpInside)
+        view.backgroundColor = .black
+        redButton.addTarget(self, action: #selector(delegate?.setRed), for: .touchUpInside)
+        greenButton.addTarget(self, action: #selector(delegate?.setGreen), for: .touchUpInside)
+        blueButton.addTarget(self, action: #selector(delegate?.setBlue), for: .touchUpInside)
+setupGraphics()
+    }
+
+    func setupGraphics() {
+        stack.addArrangedSubview(redButton)
+        stack.addArrangedSubview(greenButton)
+        stack.addArrangedSubview(blueButton)
+        view.addSubview(stack)
+        stack.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        stack.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        stack.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        stack.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
     }
 
     @objc func setRed() {
@@ -43,6 +63,8 @@ return button
 }
 
 
-protocol ColorDelegate {
-    func setBackground(color: UIColor)
+@objc protocol ColorDelegate: AnyObject {
+@objc func setRed()
+@objc func setGreen()
+    @objc func setBlue()
 }
