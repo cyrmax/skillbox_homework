@@ -32,9 +32,9 @@ return button
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        redButton.addTarget(self, action: #selector(delegate?.setRed), for: .touchUpInside)
-        greenButton.addTarget(self, action: #selector(delegate?.setGreen), for: .touchUpInside)
-        blueButton.addTarget(self, action: #selector(delegate?.setBlue), for: .touchUpInside)
+        redButton.addTarget(delegate, action: #selector(setRed), for: .touchUpInside)
+        greenButton.addTarget(delegate, action: #selector(setGreen), for: .touchUpInside)
+        blueButton.addTarget(delegate, action: #selector(setBlue), for: .touchUpInside)
 setupGraphics()
     }
 

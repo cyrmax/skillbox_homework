@@ -44,9 +44,9 @@ return SecondInternalController()
 addChild(childController)
 setupGraphics()
         childController.didMove(toParent: self)
-        redButton.addTarget(self, action: #selector(childController.setRed), for: .touchUpInside)
-        greenButton.addTarget(self, action: #selector(childController.setGreen), for: .touchUpInside)
-        blueButton.addTarget(self, action: #selector(childController.setBlue), for: .touchUpInside)
+        redButton.addTarget(childController, action: #selector(setRed), for: .touchUpInside)
+        greenButton.addTarget(childController, action: #selector(setGreen), for: .touchUpInside)
+        blueButton.addTarget(childController, action: #selector(setBlue), for: .touchUpInside)
     }
 
     func setupGraphics() {
@@ -55,6 +55,7 @@ setupGraphics()
         stack.addArrangedSubview(blueButton)
         view.addSubview(stack)
         view.addSubview(childController.view)
+        childController.view.translatesAutoresizingMaskIntoConstraints = false
         stack.heightAnchor.constraint(equalToConstant: 200).isActive = true
         stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 5).isActive = true
