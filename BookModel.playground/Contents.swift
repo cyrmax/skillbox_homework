@@ -80,3 +80,23 @@ public class GenreMO: NSManagedObject {
         }
 }
 
+
+@objc(TitleInfoMO)
+public class TitleInfoMO: NSManagedObject {
+    @NSManaged var bookTitle: String
+    @NSManaged var author: AuthorMO
+
+    static var _entityDescription: NSEntityDescription?
+        static func entityDescription() -> NSEntityDescription {
+            if let _ = self._entityDescription {
+                return self._entityDescription!
+            }
+    let des = NSEntityDescription(from: self)
+            des.addProperty(NSAttributeDescription(name: "bookTitle", type: .stringAttributeType))
+            des.addProperty(NSRelationshipDescription(name: "author", destination: AuthorMO.entityDescription()))
+            self._entityDescription = des
+            return self._entityDescription!
+        }
+}
+
+
