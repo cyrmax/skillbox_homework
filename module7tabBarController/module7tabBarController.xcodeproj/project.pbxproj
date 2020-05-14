@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED613CB0246DBE3400D629E0 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED613CAF246DBE3400D629E0 /* SecondTabViewController.swift */; };
 		ED854B01245F3431001D21C5 /* GreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED854B00245F3431001D21C5 /* GreenController.swift */; };
 		ED854B03245F347E001D21C5 /* BlueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED854B02245F347E001D21C5 /* BlueController.swift */; };
 		ED854B05245F34AD001D21C5 /* RedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED854B04245F34AD001D21C5 /* RedController.swift */; };
+		EDD9E94F246DB4840059E37F /* SecondInternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9E94E246DB4840059E37F /* SecondInternalViewController.swift */; };
 		EDDAC0132438B27E00C3C44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAC0122438B27E00C3C44A /* AppDelegate.swift */; };
 		EDDAC0152438B27E00C3C44A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDAC0142438B27E00C3C44A /* SceneDelegate.swift */; };
 		EDDAC01C2438B28400C3C44A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDAC01B2438B28400C3C44A /* Assets.xcassets */; };
@@ -21,9 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED613CAF246DBE3400D629E0 /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
 		ED854B00245F3431001D21C5 /* GreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenController.swift; sourceTree = "<group>"; };
 		ED854B02245F347E001D21C5 /* BlueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueController.swift; sourceTree = "<group>"; };
 		ED854B04245F34AD001D21C5 /* RedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedController.swift; sourceTree = "<group>"; };
+		EDD9E94E246DB4840059E37F /* SecondInternalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondInternalViewController.swift; sourceTree = "<group>"; };
 		EDDAC00F2438B27E00C3C44A /* module7tabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = module7tabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDAC0122438B27E00C3C44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDDAC0142438B27E00C3C44A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 				ED854B00245F3431001D21C5 /* GreenController.swift */,
 				ED854B02245F347E001D21C5 /* BlueController.swift */,
 				ED854B04245F34AD001D21C5 /* RedController.swift */,
+				ED613CAF246DBE3400D629E0 /* SecondTabViewController.swift */,
+				EDD9E94E246DB4840059E37F /* SecondInternalViewController.swift */,
 				EDDAC02A2438B5DC00C3C44A /* ThirdTabViewController.swift */,
 				EDE14A2124681D3B0041DDDC /* ThirdInternalController.swift */,
 				EDDAC01B2438B28400C3C44A /* Assets.xcassets */,
@@ -158,9 +164,11 @@
 				EDDAC02B2438B5DC00C3C44A /* ThirdTabViewController.swift in Sources */,
 				EDDAC0292438B4CE00C3C44A /* FirstTabViewController.swift in Sources */,
 				ED854B05245F34AD001D21C5 /* RedController.swift in Sources */,
+				EDD9E94F246DB4840059E37F /* SecondInternalViewController.swift in Sources */,
 				EDE14A2224681D3B0041DDDC /* ThirdInternalController.swift in Sources */,
 				EDDAC0152438B27E00C3C44A /* SceneDelegate.swift in Sources */,
 				EDDAC0272438B3D400C3C44A /* MainViewController.swift in Sources */,
+				ED613CB0246DBE3400D629E0 /* SecondTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
