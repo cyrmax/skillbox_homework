@@ -42,6 +42,7 @@ return st
         redBtn.addTarget(self, action: #selector(setRed), for: .touchUpInside)
         greenBtn.addTarget(self, action: #selector(setGreen), for: .touchUpInside)
         blueBtn.addTarget(self, action: #selector(setBlue), for: .touchUpInside)
+        setupGraphics()
     }
 
     @objc func selectRed() {

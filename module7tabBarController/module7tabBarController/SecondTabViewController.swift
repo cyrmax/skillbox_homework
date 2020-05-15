@@ -20,6 +20,7 @@ return label
         super.viewDidLoad()
         view.backgroundColor = .green
         changeBtn.addTarget(self, action: #selector(changeColor), for: .touchUpInside)
+        setupGraphics()
     }
 
     @objc func changeColor() {
