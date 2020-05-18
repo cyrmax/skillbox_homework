@@ -26,6 +26,7 @@ return label
     @objc func changeColor() {
 let vc = SecondInternalController()
         vc.delegate = self
+        vc.setColor(colorLabel.text ?? "error")
 present(vc, animated: true)
     }
 

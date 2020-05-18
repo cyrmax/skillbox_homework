@@ -53,6 +53,7 @@ return st
         stack.addArrangedSubview(redBtn)
         stack.addArrangedSubview(greenBtn)
         stack.addArrangedSubview(blueBtn)
+        view.addSubview(stack)
         colorLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         colorLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 15).isActive = true
         colorLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -15).isActive = true
@@ -76,6 +77,10 @@ dismiss(animated: true, completion: nil)
     @objc func setBlue() {
         delegate?.setBlue()
         dismiss(animated: true, completion: nil)
+    }
+
+    func setColor(_ str: String) {
+        colorLabel.text = str
     }
 }
 
