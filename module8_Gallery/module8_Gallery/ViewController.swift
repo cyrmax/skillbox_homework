@@ -2,6 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var imageArray = [UIImage]()
+var imgIndex = 0
     let imgView: UIImageView = {
         let imv = UIImageView()
         imv.translatesAutoresizingMaskIntoConstraints = false
@@ -42,7 +43,9 @@ class ViewController: UIViewController {
             imageArray.append(UIImage(contentsOfFile: file.path)!)
         }
 setupGraphics()
-        imgView.image = imageArray[0]
+        imgView.image = imageArray[imgIndex]
+        backBtn.addTarget(self, action: #selector(imgBack), for: .touchUpInside)
+        forwardBtn.addTarget(self, action: #selector(imgForward), for: .touchUpInside)
     }
 
 
@@ -59,6 +62,20 @@ setupGraphics()
         stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 5).isActive = true
         stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -5).isActive = true
         stack.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    }
+
+    @objc func imgBack() {
+        if imgIndex > 0 {
+imgIndex -= 1
+            imgView.image = imageArray[imgIndex]
+        }
+    }
+
+    @objc func imgForward() {
+        if imgIndex < 9 {
+imgIndex += 1
+            imgView.image = imageArray[imgIndex]
+        }
     }
 }
 
