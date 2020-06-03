@@ -1,10 +1,14 @@
 import CoreData
 import Foundation
 
-
 extension NSEntityDescription {
-    func addProperty(_ property: NSPropertyDescription) {
+    func addAttribute(name: String, type: NSAttributeType, isOptional: Bool = false) {
+let property = NSAttributeDescription(name: name, type: type, isOptional: isOptional)
         self.properties.append(property)
+    }
+    func addRelationship(name: String, destination: NSEntityDescription, isOptional: Bool = false, minCount: Int = 1, maxCount: Int = 1) {
+let relation = NSRelationshipDescription(name: name, destination: destination, isOptional: isOptional, minCount: minCount, maxCount: maxCount)
+        self.properties.append(relation)
     }
 }
 
@@ -15,7 +19,6 @@ extension NSEntityDescription {
 managedObjectClassName = NSStringFromClass(className)
     }
 }
-
 
 extension NSAttributeDescription {
     convenience init(name: String, type: NSAttributeType, isOptional: Bool = false) {
@@ -38,65 +41,31 @@ extension NSRelationshipDescription {
     }
 }
 
-
-@objc(AuthorMO)
-public class AuthorMO: NSManagedObject {
+@objc(Author)
+public class Author: NSManagedObject {
     @NSManaged var firstname: String?
     @NSManaged var lastname: String?
     @NSManaged var nickname: String?
     @NSManaged var email: String?
-
-    static private var _entityDescription: NSEntityDescription?
-    static func entityDescription() -> NSEntityDescription {
-        if let _ = self._entityDescription {
-            return self._entityDescription!
-        }
-let des = NSEntityDescription(from: self)
-        des.addProperty(NSAttributeDescription(name: "firstname", type: .stringAttributeType, isOptional: true))
-        des.addProperty(NSAttributeDescription(name: "lastname", type: .stringAttributeType, isOptional: true))
-        des.addProperty(NSAttributeDescription(name: "nickname", type: .stringAttributeType, isOptional: true))
-        des.addProperty(NSAttributeDescription(name: "email", type: .stringAttributeType, isOptional: true))
-        self._entityDescription = des
-        return self._entityDescription!
-    }
 }
 
-
-@objc(GenreMO)
-public class GenreMO: NSManagedObject {
+@objc(Genre)
+public class Genre: NSManagedObject {
     @NSManaged var name: String
     @NSManaged var match: Int
+}
 
-        static private var _entityDescription: NSEntityDescription?
-        static func entityDescription() -> NSEntityDescription {
-            if let _ = self._entityDescription {
-                return self._entityDescription!
-            }
-    let des = NSEntityDescription(from: self)
-            des.addProperty(NSAttributeDescription(name: "name", type: .stringAttributeType))
-            des.addProperty(NSAttributeDescription(name: "match", type: .integer16AttributeType))
-            self._entityDescription = des
-            return self._entityDescription!
-        }
+@objc(TitleInfo)
+public class TitleInfo: NSManagedObject {
+    @NSManaged var bookTitle: String
+    @NSManaged var author: Author
+    @NSManaged var genres: Set<Genre>
 }
 
 
-@objc(TitleInfoMO)
-public class TitleInfoMO: NSManagedObject {
-    @NSManaged var bookTitle: String
-    @NSManaged var author: AuthorMO
-
-    static var _entityDescription: NSEntityDescription?
-        static func entityDescription() -> NSEntityDescription {
-            if let _ = self._entityDescription {
-                return self._entityDescription!
-            }
-    let des = NSEntityDescription(from: self)
-            des.addProperty(NSAttributeDescription(name: "bookTitle", type: .stringAttributeType))
-            des.addProperty(NSRelationshipDescription(name: "author", destination: AuthorMO.entityDescription()))
-            self._entityDescription = des
-            return self._entityDescription!
-        }
+@objc(Description)
+public class Description: NSManagedObject {
+    @NSManaged var titleInfo: TitleInfo
 }
 
 
