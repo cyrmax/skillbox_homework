@@ -20,12 +20,12 @@ var labels = [UILabel]()
         for i in 0...3 {
 let imgView = generateImageView(index: i)
             view.addSubview(imgView)
-// constraints should be here
         }
     }
 
     func generateImageView(index: Int) -> UIView {
-let imgView = UIImageView(image: imageArray[index])
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        imgView.image = imageArray[index]
         imgView.translatesAutoresizingMaskIntoConstraints = false
 let label = UILabel()
         label.text = "Label \(index)"
