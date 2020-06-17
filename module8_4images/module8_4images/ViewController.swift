@@ -24,7 +24,18 @@ let imgView = generateImageView(index: i)
     }
 
     func generateImageView(index: Int) -> UIView {
-        let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+var imgView = UIImageView()
+        switch index {
+        case 0:
+imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        case 1:
+imgView = UIImageView(frame: CGRect(x: 105, y: 0, width: 100, height: 100))
+        case 2:
+imgView = UIImageView(frame: CGRect(x: 0, y: 105, width: 100, height: 100))
+        case 3:
+imgView = UIImageView(frame: CGRect(x: 105, y: 105, width: 100, height: 100))
+        default: break
+        }
         imgView.image = imageArray[index]
         imgView.translatesAutoresizingMaskIntoConstraints = false
 let label = UILabel()
