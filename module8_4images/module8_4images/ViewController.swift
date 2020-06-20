@@ -17,30 +17,26 @@ var labels = [UILabel]()
     }
 
     func setupGraphics() {
+        var x: CGFloat = 0
+        var y: CGFloat = -105
         for i in 0...3 {
-let imgView = generateImageView(index: i)
-            view.addSubview(imgView)
+            if i % 2 == 0 {
+x = 0
+y += 105
+            } else {
+x = 105
+            }
+            view.addSubview(generateImageView(x: x, y: y, index: i))
         }
     }
 
-    func generateImageView(index: Int) -> UIView {
-var imgView = UIImageView()
-        switch index {
-        case 0:
-imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        case 1:
-imgView = UIImageView(frame: CGRect(x: 105, y: 0, width: 100, height: 100))
-        case 2:
-imgView = UIImageView(frame: CGRect(x: 0, y: 105, width: 100, height: 100))
-        case 3:
-imgView = UIImageView(frame: CGRect(x: 105, y: 105, width: 100, height: 100))
-        default: break
-        }
+    func generateImageView(x: CGFloat, y: CGFloat, index: Int) -> UIView {
+        let imgView = UIImageView(frame: CGRect(x: x, y: y, width: 100, height: 100))
         imgView.image = imageArray[index]
-        imgView.translatesAutoresizingMaskIntoConstraints = false
+//        imgView.translatesAutoresizingMaskIntoConstraints = false
 let label = UILabel()
         label.text = "Label \(index)"
-        label.translatesAutoresizingMaskIntoConstraints = false
+//        label.translatesAutoresizingMaskIntoConstraints = false
         imgView.addSubview(label)
         NSLayoutConstraint.activate([
         label.centerXAnchor.constraint(equalTo: imgView.centerXAnchor),
