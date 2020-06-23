@@ -46,9 +46,10 @@ return btn
 
     let stack: UIStackView = {
 let st = UIStackView()
+        st.translatesAutoresizingMaskIntoConstraints = false
         st.axis = .horizontal
         st.alignment = .fill
-        st.distribution = .equalSpacing
+        st.distribution = .fillEqually
         st.spacing = 4
 return st
     }()
