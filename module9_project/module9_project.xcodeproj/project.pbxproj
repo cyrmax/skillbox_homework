@@ -13,6 +13,7 @@
 		ED22130F249E2D6800301302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED22130D249E2D6800301302 /* LaunchScreen.storyboard */; };
 		ED221317249E2DE100301302 /* rootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED221316249E2DE100301302 /* rootVC.swift */; };
 		ED221319249E2E6900301302 /* firstBTNVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED221318249E2E6900301302 /* firstBTNVC.swift */; };
+		EDA92CC024A1730F00FC9327 /* SecondBtnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA92CBF24A1730F00FC9327 /* SecondBtnVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ED221310249E2D6800301302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED221316249E2DE100301302 /* rootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rootVC.swift; sourceTree = "<group>"; };
 		ED221318249E2E6900301302 /* firstBTNVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstBTNVC.swift; sourceTree = "<group>"; };
+		EDA92CBF24A1730F00FC9327 /* SecondBtnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondBtnVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				ED221304249E2D6200301302 /* SceneDelegate.swift */,
 				ED221316249E2DE100301302 /* rootVC.swift */,
 				ED221318249E2E6900301302 /* firstBTNVC.swift */,
+				EDA92CBF24A1730F00FC9327 /* SecondBtnVC.swift */,
 				ED22130B249E2D6800301302 /* Assets.xcassets */,
 				ED22130D249E2D6800301302 /* LaunchScreen.storyboard */,
 				ED221310249E2D6800301302 /* Info.plist */,
@@ -140,6 +143,7 @@
 				ED221319249E2E6900301302 /* firstBTNVC.swift in Sources */,
 				ED221317249E2DE100301302 /* rootVC.swift in Sources */,
 				ED221303249E2D6200301302 /* AppDelegate.swift in Sources */,
+				EDA92CC024A1730F00FC9327 /* SecondBtnVC.swift in Sources */,
 				ED221305249E2D6200301302 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

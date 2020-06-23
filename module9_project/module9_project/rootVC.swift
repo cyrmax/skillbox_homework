@@ -5,6 +5,7 @@ class RootVC: UITabBarController {
         super.viewDidLoad()
         var vcs = [UIViewController]()
                 vcs.append(FirsttBTNVC())
+        vcs.append(SecondBtnVC())
 viewControllers = vcs
     }
 }

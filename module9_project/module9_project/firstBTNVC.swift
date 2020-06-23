@@ -55,6 +55,7 @@ return st
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         SALG = view.safeAreaLayoutGuide
 setupGraphics()
     }
