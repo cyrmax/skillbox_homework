@@ -15,6 +15,7 @@
 		ED221319249E2E6900301302 /* firstBTNVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED221318249E2E6900301302 /* firstBTNVC.swift */; };
 		EDA92CC024A1730F00FC9327 /* SecondBtnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA92CBF24A1730F00FC9327 /* SecondBtnVC.swift */; };
 		EDA92CC224A1802600FC9327 /* LabelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA92CC124A1802600FC9327 /* LabelsVC.swift */; };
+		EDA92CC624A1848E00FC9327 /* ExpandTextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA92CC524A1848E00FC9327 /* ExpandTextVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		ED221318249E2E6900301302 /* firstBTNVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstBTNVC.swift; sourceTree = "<group>"; };
 		EDA92CBF24A1730F00FC9327 /* SecondBtnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondBtnVC.swift; sourceTree = "<group>"; };
 		EDA92CC124A1802600FC9327 /* LabelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsVC.swift; sourceTree = "<group>"; };
+		EDA92CC524A1848E00FC9327 /* ExpandTextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandTextVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				ED221318249E2E6900301302 /* firstBTNVC.swift */,
 				EDA92CBF24A1730F00FC9327 /* SecondBtnVC.swift */,
 				EDA92CC124A1802600FC9327 /* LabelsVC.swift */,
+				EDA92CC524A1848E00FC9327 /* ExpandTextVC.swift */,
 				ED22130B249E2D6800301302 /* Assets.xcassets */,
 				ED22130D249E2D6800301302 /* LaunchScreen.storyboard */,
 				ED221310249E2D6800301302 /* Info.plist */,
@@ -146,6 +149,7 @@
 				ED221319249E2E6900301302 /* firstBTNVC.swift in Sources */,
 				ED221317249E2DE100301302 /* rootVC.swift in Sources */,
 				ED221303249E2D6200301302 /* AppDelegate.swift in Sources */,
+				EDA92CC624A1848E00FC9327 /* ExpandTextVC.swift in Sources */,
 				EDA92CC024A1730F00FC9327 /* SecondBtnVC.swift in Sources */,
 				ED221305249E2D6200301302 /* SceneDelegate.swift in Sources */,
 				EDA92CC224A1802600FC9327 /* LabelsVC.swift in Sources */,

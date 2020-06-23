@@ -7,6 +7,7 @@ class RootVC: UITabBarController {
                 vcs.append(FirsttBTNVC())
         vcs.append(SecondBtnVC())
         vcs.append(LabelsVC())
+        vcs.append(ExpandTextVC())
 viewControllers = vcs
     }
 }
