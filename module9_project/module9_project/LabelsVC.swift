@@ -8,14 +8,14 @@ class LabelsVC: UIViewController {
     let leftLabel: UILabel = {
 let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = bigStr
+        lbl.text = ""
 return lbl
     }()
 
     let rightLabel: UILabel = {
 let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = smallStr
+        lbl.text = ""
         return lbl
     }()
 
@@ -49,7 +49,7 @@ return btn
         view.addSubview(leftBtn)
         view.addSubview(rightBtn)
 let rightLabelConstraint =             rightLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 40)
-        rightLabelConstraint.priority = UILayoutPriority(rawValue: 999)
+        rightLabelConstraint.priority = UILayoutPriority(rawValue: 1000)
         NSLayoutConstraint.activate([
             leftBtn.topAnchor.constraint(equalTo: leftLabel.bottomAnchor, constant: 20),
             leftBtn.centerXAnchor.constraint(equalTo: leftLabel.centerXAnchor),
@@ -64,6 +64,7 @@ let rightLabelConstraint =             rightLabel.widthAnchor.constraint(greater
             rightLabel.leftAnchor.constraint(equalTo: leftLabel.rightAnchor, constant: 8),
 rightLabelConstraint,
         ])
+        leftLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: .horizontal)
     }
 
     @objc func leftBtnPressed() {
