@@ -52,9 +52,9 @@ let rightLabelConstraint =             rightLabel.widthAnchor.constraint(greater
         rightLabelConstraint.priority = UILayoutPriority(rawValue: 1000)
         NSLayoutConstraint.activate([
             leftBtn.topAnchor.constraint(equalTo: leftLabel.bottomAnchor, constant: 20),
-            leftBtn.centerXAnchor.constraint(equalTo: leftLabel.centerXAnchor),
+            leftBtn.leftAnchor.constraint(equalTo: SALG.leftAnchor, constant: 10),
             rightBtn.topAnchor.constraint(equalTo: rightLabel.bottomAnchor, constant: 20),
-            rightBtn.centerXAnchor.constraint(equalTo: rightLabel.centerXAnchor),
+            rightBtn.rightAnchor.constraint(equalTo: SALG.rightAnchor, constant: -10),
             leftLabel.topAnchor.constraint(equalTo: SALG.topAnchor, constant: 20),
             rightLabel.topAnchor.constraint(equalTo: SALG.topAnchor, constant: 20),
             leftLabel.heightAnchor.constraint(equalToConstant: 50),
