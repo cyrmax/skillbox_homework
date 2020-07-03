@@ -1,10 +1,12 @@
 import UIKit
 
-class CollectionVC: UICollectionViewController {
+class CollectionVC: UIViewController {
     var imageArray: [UIImage] = []
-
+    var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+let layout = UICollectionViewLayout()
+        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
 print("Collection controller loaded")
         var url = Bundle.main.resourceURL!
         url.appendPathComponent("pics")

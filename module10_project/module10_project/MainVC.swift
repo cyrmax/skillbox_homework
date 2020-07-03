@@ -4,5 +4,10 @@ class MainVC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewControllers?.append(CollectionVC(collectionViewLayout: 
+        var vcs = [UIViewController]()
+        vcs.append(ScrollVC())
+        vcs.append(CollectionVC())
+        viewControllers = vcs
+}
+
 }
