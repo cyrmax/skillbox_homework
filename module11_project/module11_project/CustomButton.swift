@@ -21,4 +21,14 @@ class CustomButton: UIButton {
             layer.borderWidth = CGFloat(newValue)
         }
     }
+
+    @IBInspectable
+    var borderColor: UIColor {
+        get {
+            return UIColor(cgColor: layer.borderColor!)
+        }
+        set {
+            layer.borderColor = newValue.cgColor
+        }
+    }
 }
