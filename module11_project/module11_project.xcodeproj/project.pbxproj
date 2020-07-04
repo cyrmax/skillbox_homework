@@ -13,6 +13,7 @@
 		D4106FD824B0A674000EC083 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4106FD624B0A674000EC083 /* LaunchScreen.storyboard */; };
 		D4106FE024B0A70C000EC083 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106FDF24B0A70C000EC083 /* MainVC.swift */; };
 		D4106FE224B0A78F000EC083 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106FE124B0A78F000EC083 /* CustomButton.swift */; };
+		D4106FE424B0D633000EC083 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4106FE324B0D633000EC083 /* CustomSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D4106FD924B0A674000EC083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4106FDF24B0A70C000EC083 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D4106FE124B0A78F000EC083 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		D4106FE324B0D633000EC083 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D4106FCD24B0A673000EC083 /* SceneDelegate.swift */,
 				D4106FDF24B0A70C000EC083 /* MainVC.swift */,
 				D4106FE124B0A78F000EC083 /* CustomButton.swift */,
+				D4106FE324B0D633000EC083 /* CustomSegmentedControl.swift */,
 				D4106FD424B0A674000EC083 /* Assets.xcassets */,
 				D4106FD624B0A674000EC083 /* LaunchScreen.storyboard */,
 				D4106FD924B0A674000EC083 /* Info.plist */,
@@ -139,6 +142,7 @@
 				D4106FE224B0A78F000EC083 /* CustomButton.swift in Sources */,
 				D4106FCC24B0A673000EC083 /* AppDelegate.swift in Sources */,
 				D4106FE024B0A70C000EC083 /* MainVC.swift in Sources */,
+				D4106FE424B0D633000EC083 /* CustomSegmentedControl.swift in Sources */,
 				D4106FCE24B0A673000EC083 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
