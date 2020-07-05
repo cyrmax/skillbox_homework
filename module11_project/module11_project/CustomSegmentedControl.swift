@@ -1,5 +1,6 @@
 import UIKit
 
+@IBDesignable
 class CustomSegmentedControl: UIView {
     weak var delegate: CustomSegmentedControlDelegate?
     var salg: UILayoutGuide {
@@ -13,6 +14,7 @@ class CustomSegmentedControl: UIView {
         }
         set {
             self.setTitle(newValue, for: .left)
+layoutIfNeeded()
         }
     }
 
@@ -23,6 +25,7 @@ class CustomSegmentedControl: UIView {
         }
         set {
             self.setTitle(newValue, for: .right)
+            layoutIfNeeded()
         }
     }
 
@@ -33,8 +36,10 @@ class CustomSegmentedControl: UIView {
         }
         set {
             sc.layer.borderColor = newValue.cgColor
+            layoutIfNeeded()
         }
     }
+    
     private let sc: UISegmentedControl  = {
         let s = UISegmentedControl(items: ["First", "second"])
         s.translatesAutoresizingMaskIntoConstraints = false

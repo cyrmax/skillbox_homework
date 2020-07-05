@@ -9,6 +9,7 @@ class CustomButton: UIButton {
         }
         set {
             layer.cornerRadius = CGFloat(newValue)
+            layoutIfNeeded()
         }
     }
 
@@ -19,6 +20,7 @@ class CustomButton: UIButton {
         }
         set {
             layer.borderWidth = CGFloat(newValue)
+            layoutIfNeeded()
         }
     }
 
@@ -29,6 +31,7 @@ class CustomButton: UIButton {
         }
         set {
             layer.borderColor = newValue.cgColor
+            layoutIfNeeded()
         }
     }
 }
