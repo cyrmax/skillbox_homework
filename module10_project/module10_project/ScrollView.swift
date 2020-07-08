@@ -3,7 +3,7 @@ import UIKit
 
 class ScrollView: UIScrollView {
     var salg: UILayoutGuide {
-        return self.safeAreaLayoutGuide
+        return self.contentLayoutGuide
     }
 
     let view1: UIView = {
