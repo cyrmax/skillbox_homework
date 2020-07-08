@@ -15,7 +15,7 @@ print("Collection controller loaded")
             imageArray.append(UIImage(contentsOfFile: file.path)!)
         }
         print("images loaded: \(imageArray.count)")
-
+        view.addSubview(collectionView)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "collectionCell")
