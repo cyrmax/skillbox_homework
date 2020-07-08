@@ -35,7 +35,7 @@ let v = UIView()
     }()
 
     private func setupView() {
-//        contentSize = CGSize(width: self.frame.size.width, height: 2000)
+        contentSize = CGSize(width: self.frame.size.width, height: 2000)
 addSubview(view1)
 addSubview(view2)
         addSubview(view3)
