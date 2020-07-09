@@ -31,4 +31,14 @@ addSubview(label)
             label.centerYAnchor.constraint(equalTo: salg.centerYAnchor)
         ])
     }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupView()
+    }
 }
