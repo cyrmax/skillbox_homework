@@ -19,6 +19,8 @@
 		D48C27E624AE8A6C004C62F4 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C27E524AE8A6B004C62F4 /* CollectionViewLayout.swift */; };
 		D48C27E824AE8CD0004C62F4 /* pics in Resources */ = {isa = PBXBuildFile; fileRef = D48C27E724AE8CD0004C62F4 /* pics */; };
 		D48C27EA24AE90E9004C62F4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C27E924AE90E9004C62F4 /* MainVC.swift */; };
+		EDB162E924B94DD700C14CF5 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB162E824B94DD700C14CF5 /* SettingsVC.swift */; };
+		EDB162EB24B94E2000C14CF5 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB162EA24B94E2000C14CF5 /* SettingsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		D48C27E524AE8A6B004C62F4 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 		D48C27E724AE8CD0004C62F4 /* pics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pics; path = ../../pics; sourceTree = "<group>"; };
 		D48C27E924AE90E9004C62F4 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		EDB162E824B94DD700C14CF5 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		EDB162EA24B94E2000C14CF5 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				D48C27D024AE7828004C62F4 /* Assets.xcassets */,
 				D4560AF924AF6DB000EA08CB /* ScrollVC.swift */,
 				D4560AFB24AF6DF500EA08CB /* ScrollView.swift */,
+				EDB162E824B94DD700C14CF5 /* SettingsVC.swift */,
+				EDB162EA24B94E2000C14CF5 /* SettingsCell.swift */,
 				D48C27D224AE7828004C62F4 /* LaunchScreen.storyboard */,
 				D48C27E724AE8CD0004C62F4 /* pics */,
 				D48C27D524AE7828004C62F4 /* Info.plist */,
@@ -172,6 +178,8 @@
 				D48C27E024AE7E17004C62F4 /* CollectionVCDatasource.swift in Sources */,
 				D48C27EA24AE90E9004C62F4 /* MainVC.swift in Sources */,
 				D4560AFC24AF6DF500EA08CB /* ScrollView.swift in Sources */,
+				EDB162E924B94DD700C14CF5 /* SettingsVC.swift in Sources */,
+				EDB162EB24B94E2000C14CF5 /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
