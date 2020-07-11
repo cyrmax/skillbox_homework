@@ -44,18 +44,19 @@ addSubview(view2)
         addSubview(view3)
         addSubview(view4)
         NSLayoutConstraint.activate([
-            contentGuide.widthAnchor.constraint(equalTo: frameGuide.widthAnchor),
+//            contentGuide.widthAnchor.constraint(equalTo: frameGuide.widthAnchor),
             view1.leftAnchor.constraint(equalTo: contentGuide.leftAnchor),
             view1.topAnchor.constraint(equalTo: contentGuide.topAnchor),
-            view1.widthAnchor.constraint(equalToConstant: 150),
+            view1.widthAnchor.constraint(equalToConstant: 350),
             view1.heightAnchor.constraint(equalToConstant: 400),
             view2.leftAnchor.constraint(equalTo: view1.rightAnchor, constant: 20),
             view2.topAnchor.constraint(equalTo: contentGuide.topAnchor),
             view2.trailingAnchor.constraint(equalTo: contentGuide.trailingAnchor),
+            view2.widthAnchor.constraint(equalToConstant: 350),
             view2.heightAnchor.constraint(equalToConstant: 400),
             view3.leftAnchor.constraint(equalTo: contentGuide.leftAnchor),
             view3.topAnchor.constraint(equalTo: view1.bottomAnchor, constant: 20),
-            view3.widthAnchor.constraint(equalToConstant: 150),
+            view3.widthAnchor.constraint(equalToConstant: 400),
             view3.heightAnchor.constraint(equalToConstant: 400),
             view4.leftAnchor.constraint(equalTo: view3.rightAnchor, constant: 20),
             view4.topAnchor.constraint(equalTo: view2.bottomAnchor, constant: 20),
