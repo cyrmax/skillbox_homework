@@ -7,6 +7,7 @@ class MainVC: UITabBarController {
         var vcs = [UIViewController]()
         vcs.append(ScrollVC())
         vcs.append(CollectionVC())
+        vcs.append(SettingsVC())
         viewControllers = vcs
 }
 
