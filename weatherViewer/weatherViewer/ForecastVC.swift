@@ -50,9 +50,7 @@ guard let decoded = try? decoder.decode(ForecastResponse.self, from: data!) else
 
 //print(decoded)
 self.weathers = decoded.list
-DispatchQueue.main.sync {
     self.tableView.reloadData()
-                }
             }
         }
     }
