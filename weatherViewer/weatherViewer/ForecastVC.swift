@@ -10,7 +10,11 @@ class ForecastVC: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
         tableView.delegate = self
-fetchWeather()
+        WeatherService.shared.fetchForecast() {
+response in
+            self.weathers = response.list
+            self.tableView.reloadData()
+        }
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,31 +31,4 @@ fetchWeather()
 return cell
     }
 
-    func fetchWeather() {
-        let params: [String: Any] = [
-            "id": cityID,
-            "cnt": 7,
-            "appid": apiKey
-        ]
-
-
-
-        AF.request("https://api.openweathermap.org/data/2.5/forecast?id=\(cityID)&appid=\(apiKey)").validate().response {
-response in
-            switch response.result {
-            case .failure(let error):
-                print(error.localizedDescription)
-            case .success(let data):
-let decoder = JSONDecoder()
-guard let decoded = try? decoder.decode(ForecastResponse.self, from: data!) else {
-    print("decoding error")
-    return
-                }
-
-//print(decoded)
-self.weathers = decoded.list
-    self.tableView.reloadData()
-            }
-        }
-    }
 }

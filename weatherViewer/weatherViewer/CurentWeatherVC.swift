@@ -35,32 +35,11 @@ return lbl
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGraphics()
-        fetchWeather()
+        WeatherService.shared.fetchWeather() {
+response in
+            self.tempLbl.text! += response.main.temp.description
+            self.windLbl.text! += response.wind.speed.description
+        }
     }
 
-    func fetchWeather() {
-        URLSession.shared.dataTask(with: URL(string: apiUrl + "?id=" + cityID + "&appid=" + apiKey)!, completionHandler: {
-data, response, error in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-guard
-let data = data,
-let response = response as? HTTPURLResponse,
-    response.statusCode == 200
-else { return }
-
-let decoder = JSONDecoder()
-            do {
-            let weatherResponse = try decoder.decode(WeatherResponse.self, from: data)
-                DispatchQueue.main.sync {
-                self.tempLbl.text! += weatherResponse.main.temp.description
-                self.windLbl.text! += weatherResponse.wind.speed.description
-                }
-            } catch {
-                print(error.localizedDescription)
-            }
-        }).resume()
-    }
 }
