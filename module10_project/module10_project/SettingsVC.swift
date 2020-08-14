@@ -28,7 +28,7 @@ return 3
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SettingsCell
-        cell.setupView()
+//        cell.setupView()
         cell.accessoryType = .disclosureIndicator
         switch (indexPath.section, indexPath.row) {
         case (0, 0):

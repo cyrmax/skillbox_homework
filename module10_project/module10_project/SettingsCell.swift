@@ -64,4 +64,14 @@ let s = UIStackView()
         switcher.isHidden = true
         numberLbl.isHidden = true
     }
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+setupView()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+setupView()
+    }
 }
