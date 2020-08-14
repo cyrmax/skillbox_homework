@@ -11,9 +11,14 @@ class ForecastVC: UITableViewController {
         tableView.dataSource = self
         tableView.delegate = self
         WeatherService.shared.fetchForecast() {
-response in
-            self.weathers = response.list
-            self.tableView.reloadData()
+result in
+            switch result {
+            case .success(let response):
+                self.weathers = response.list
+                self.tableView.reloadData()
+            case .failure(let error):
+                self.present(UIAlertController.errorAlert(message: error.localizedDescription), animated: true)
+            }
         }
     }
 

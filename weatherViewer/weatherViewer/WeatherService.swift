@@ -9,7 +9,9 @@ class WeatherService {
         URLSession.shared.dataTask(with: URL(string: apiUrl + "?id=" + cityID + "&appid=" + apiKey)!, completionHandler: {
             data, response, error in
             if let error = error {
-                print(error.localizedDescription)
+                DispatchQueue.main.sync {
+                handler(Result.failure(error))
+                }
                 return
             }
             guard
@@ -22,10 +24,12 @@ class WeatherService {
             do {
                 let weatherResponse = try decoder.decode(WeatherResponse.self, from: data)
                 DispatchQueue.main.sync {
-handler(weatherResponse)
+                    handler(Result.success(weatherResponse))
                 }
             } catch {
-                print(error.localizedDescription)
+                DispatchQueue.main.sync {
+                handler(Result.failure(error))
+                }
             }
         }).resume()
     }
@@ -37,21 +41,19 @@ handler(weatherResponse)
             "appid": apiKey
         ]
 
-
-
         AF.request("https://api.openweathermap.org/data/2.5/forecast?id=\(cityID)&appid=\(apiKey)").validate().response {
             response in
             switch response.result {
             case .failure(let error):
-                print(error.localizedDescription)
+                handler(Result.failure(error))
             case .success(let data):
                 let decoder = JSONDecoder()
                 guard let decoded = try? decoder.decode(ForecastResponse.self, from: data!) else {
-                    print("decoding error")
+//                    handler(Result.failure())
                     return
                 }
 
-handler(decoded)
+                handler(Result.success(decoded))
             }
         }
     }
@@ -59,6 +61,6 @@ handler(decoded)
 static let shared = WeatherService()
 
     private init() {}
-typealias WeatherCompletionHandler = (WeatherResponse) -> Void
-typealias ForecastCompletionHandler = (ForecastResponse) -> Void
+typealias WeatherCompletionHandler = (Result<WeatherResponse, Error>) -> Void
+typealias ForecastCompletionHandler = (Result<ForecastResponse, Error>) -> Void
 }

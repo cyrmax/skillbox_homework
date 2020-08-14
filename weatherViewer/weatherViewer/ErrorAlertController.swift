@@ -1,19 +1,13 @@
 import UIKit
 
-
-class ErrorAlertController: UIAlertController {
-
-
-    convenience init(message: String) {
-        self.init(title: "Error!", message: message, preferredStyle: .alert)
-setupController()
-    }
-
-    private func setupController() {
+extension UIAlertController {
+    static func errorAlert(message: String) -> UIAlertController {
+        let alert = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .destructive) {
-action in
-            self.dismiss(animated: true, completion: nil)
+            action in
+            alert.dismiss(animated: true, completion: nil)
         }
-        self.addAction(action)
+        alert.addAction(action)
+return alert
     }
 }

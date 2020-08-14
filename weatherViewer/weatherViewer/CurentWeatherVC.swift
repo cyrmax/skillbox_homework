@@ -36,9 +36,14 @@ return lbl
         super.viewDidLoad()
         setupGraphics()
         WeatherService.shared.fetchWeather() {
-response in
-            self.tempLbl.text! += response.main.temp.description
-            self.windLbl.text! += response.wind.speed.description
+result in
+            switch result {
+            case .success(let response):
+                self.tempLbl.text! += response.main.temp.description
+                self.windLbl.text! += response.wind.speed.description
+            case .failure(let error):
+                self.present(UIAlertController.errorAlert(message: error.localizedDescription), animated: true)
+            }
         }
     }
 
