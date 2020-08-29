@@ -1,11 +1,30 @@
 import UIKit
 
 class SettingsVC: UITableViewController {
-    var cellArray: [[SettingsCellStruct]] = []
+    var cellArray: [[SettingsCellStruct]] = [
+[
+        SettingsCellStruct(label: "Flightmode", needsSwitch: true),
+        SettingsCellStruct(label: "Wi-fi: Cyrmax"),
+        SettingsCellStruct(label: "Bluetooth On"),
+        SettingsCellStruct(label: "Mobile network"),
+        SettingsCellStruct(label: "Mobile hotspot")
+    ],
+[
+        SettingsCellStruct(label: "Notifications"),
+        SettingsCellStruct(label: "Sounds"),
+        SettingsCellStruct(label: "Do not desturb"),
+        SettingsCellStruct(label: "Screen time")
+    ],
+[
+        SettingsCellStruct(label: "General", number: 2),
+        SettingsCellStruct(label: "Controls"),
+        SettingsCellStruct(label: "Screen and brightness")
+    ]
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-fillCellArray()
+//fillCellArray()
         tableView.rowHeight = 70
         tableView.register(SettingsCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
