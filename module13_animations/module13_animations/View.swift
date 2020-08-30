@@ -102,7 +102,10 @@ isCompleted in
 
     func animateRound() {
 let animation = CABasicAnimation(keyPath: "cornerRadius")
-
+        animation.fromValue = square.layer.cornerRadius
+        animation.toValue = square.frame.size.width / 2
+        animation.duration = 2
+        square.layer.add(animation, forKey: "cornerRadius")
     }
 
     func animateSpin() {
