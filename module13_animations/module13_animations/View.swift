@@ -129,7 +129,10 @@ let animation = CABasicAnimation(keyPath: "cornerRadius")
     func animateScale() {
         UIView.animate(withDuration: 2, delay: 0, options: [.autoreverse], animations: {
             self.square.transform = CGAffineTransform(scaleX: 2, y: 2)
-        })
+        }) {
+isCompleted in
+            self.square.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
     }
 
     func animateRotation() {

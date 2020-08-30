@@ -20,6 +20,7 @@ animationsArray = [
     v.animateScale,
     v.animateRotation
         ]
+        animationsArray[0]()
     }
 
     @objc func previousAnimation() {
