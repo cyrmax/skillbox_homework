@@ -24,6 +24,7 @@ animationsArray = [
     }
 
     @objc func previousAnimation() {
+        (view as! RootView).stopAnimations()
         guard currentAnimation > 0 else { return }
 currentAnimation -= 1
         (view as! RootView).numLbl.text = currentAnimation.description
@@ -31,6 +32,7 @@ animationsArray[currentAnimation]()
     }
 
     @objc func nextAnimation() {
+        (view as! RootView).stopAnimations()
         guard currentAnimation < animationsArray.count - 1 else { return }
 currentAnimation += 1
         (view as! RootView).numLbl.text = currentAnimation.description

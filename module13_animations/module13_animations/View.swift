@@ -79,7 +79,7 @@ squareHConstraint
     }
 
     func animateColor() {
-        UIView.animate(withDuration: 2, animations: {
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 2, delay: 0, animations: {
             self.square.backgroundColor = .yellow
         }, completion: {
 isCompleted in
@@ -88,7 +88,7 @@ isCompleted in
     }
 
     func animateMovement() {
-        UIView.animate(withDuration: 2, animations: {
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 2, delay: 0, animations: {
             self.squareXConstraint.constant = UIScreen.main.bounds.width - 100
             self.squareYConstraint.constant = 100
             self.layoutIfNeeded()
@@ -109,7 +109,7 @@ let animation = CABasicAnimation(keyPath: "cornerRadius")
     }
 
     func animateSpin() {
-        UIView.animate(withDuration: 2, animations: {
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 2, delay: 0, animations: {
             self.square.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
         }, completion: {
             isCompleted in
@@ -118,7 +118,7 @@ let animation = CABasicAnimation(keyPath: "cornerRadius")
     }
 
     func animateDisappear() {
-        UIView.animate(withDuration: 2, animations: {
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 2, delay: 0, animations: {
             self.square.alpha = 0
         }, completion: {
             isCompleted in
@@ -127,7 +127,7 @@ let animation = CABasicAnimation(keyPath: "cornerRadius")
     }
 
     func animateScale() {
-        UIView.animate(withDuration: 2, delay: 0, options: [.autoreverse], animations: {
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 2, delay: 0, options: [.autoreverse], animations: {
             self.square.transform = CGAffineTransform(scaleX: 2, y: 2)
         }) {
 isCompleted in
@@ -136,9 +136,13 @@ isCompleted in
     }
 
     func animateRotation() {
-        UIView.animate(withDuration: 2, delay: 0, options: [.repeat], animations: {
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 2, delay: 0, options: [.repeat], animations: {
             self.square.transform = CGAffineTransform(rotationAngle: 2 * CGFloat.pi)
         })
+    }
+
+    func stopAnimations() {
+
     }
 
     override init(frame: CGRect) {
