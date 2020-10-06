@@ -65,6 +65,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		ED1628D9252C4798002F4885 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				ED9D65022525E6D00064980D /* TodoListVC.swift */,
+				ED9D65092525ED030064980D /* AddTaskVC.swift */,
+				ED9D650E2525ED550064980D /* AddTaskView.swift */,
+				ED9D64F32525E5930064980D /* TodoTask.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
 		EDDC996824FBE58400628A1D = {
 			isa = PBXGroup;
 			children = (
@@ -89,10 +100,7 @@
 				EDDC997424FBE58400628A1D /* AppDelegate.swift */,
 				EDDC997624FBE58400628A1D /* SceneDelegate.swift */,
 				EDDC997824FBE58400628A1D /* ViewController.swift */,
-				ED9D65022525E6D00064980D /* TodoListVC.swift */,
-				ED9D65092525ED030064980D /* AddTaskVC.swift */,
-				ED9D650E2525ED550064980D /* AddTaskView.swift */,
-				ED9D64F32525E5930064980D /* TodoTask.swift */,
+				ED1628D9252C4798002F4885 /* TodoList */,
 				EDDC997D24FBE58600628A1D /* Assets.xcassets */,
 				EDDC997F24FBE58600628A1D /* LaunchScreen.storyboard */,
 				EDDC998224FBE58600628A1D /* Info.plist */,
