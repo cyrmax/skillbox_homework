@@ -12,8 +12,19 @@ let realm = try! Realm()
         tasks = realm.objects(TodoTask.self)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.rowHeight = 70
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTask))
         tableView.reloadData()
+let addBtn = UIButton()
+        addBtn.translatesAutoresizingMaskIntoConstraints = false
+        addBtn.setTitle("Add", for: .normal)
+        addBtn.backgroundColor = .red
+        view.addSubview(addBtn)
+        NSLayoutConstraint.activate([
+            addBtn.heightAnchor.constraint(equalToConstant: 50),
+            addBtn.widthAnchor.constraint(equalToConstant: 50),
+            addBtn.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+            addBtn.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10)
+        ])
+        addBtn.addTarget(self, action: #selector(addNewTask), for: .touchUpInside)
     }
 
     @objc func addNewTask() {
