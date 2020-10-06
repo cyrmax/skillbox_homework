@@ -17,7 +17,9 @@ let realm = try! Realm()
     }
 
     @objc func addNewTask() {
-show(AddTaskVC(), sender: self)
+        present(AddTaskVC(), animated: true) {
+            self.tableView.reloadData()
+        }
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

@@ -9,7 +9,6 @@ let realm = try! Realm()
     }
 
     @objc func addTask() {
-print("addtask pressed")
         let v = self.view as! AddTaskView
         guard let text = v.nameTF.text else {
             return
