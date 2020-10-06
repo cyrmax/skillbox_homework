@@ -42,7 +42,8 @@ class CurrentWeatherVC: UIViewController {
                 self.tempLbl.text! += response.main.temp.description
                 self.windLbl.text! += response.wind.speed.description
             case .failure(let error):
-                self.present(UIAlertController.errorAlert(message: error.localizedDescription), animated: true)
+break
+//                self.present(UIAlertController.errorAlert(message: error.localizedDescription), animated: true)
             }
         }
     }
