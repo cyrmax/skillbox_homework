@@ -1,4 +1,5 @@
 import Foundation
+import RealmSwift
 
 class WeatherService {
     let cityID: String = "524901"
@@ -24,6 +25,10 @@ class WeatherService {
                 let weatherResponse = try decoder.decode(WeatherResponse.self, from: data)
                 DispatchQueue.main.sync {
                     handler(Result.success(weatherResponse))
+                }
+let realm = try! Realm()
+                try? realm.write {
+                    realm.add(weatherResponse)
                 }
             } catch {
                 DispatchQueue.main.sync {

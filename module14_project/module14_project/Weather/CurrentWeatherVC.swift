@@ -1,4 +1,5 @@
 import UIKit
+import RealmSwift
 
 let apiKey: String = "9851105cf1302262bbde4fd70207f687"
 let cityID: String = "524901"
@@ -8,6 +9,8 @@ class CurrentWeatherVC: UIViewController {
     var salg: UILayoutGuide {
         view.safeAreaLayoutGuide
     }
+
+let realm = try! Realm()
 
     let tempLbl: UILabel = {
         let lbl = UILabel()
@@ -35,12 +38,18 @@ class CurrentWeatherVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGraphics()
+
+        if let cachedWeather = realm.objects(WeatherResponse.self).first {
+        self.tempLbl.text! = "Current temperature: " + cachedWeather.main!.temp.description
+        self.windLbl.text! = "Wind speed: " + cachedWeather.wind!.speed.description
+        }
+
         WeatherService.shared.fetchWeather() {
             result in
             switch result {
             case .success(let response):
-                self.tempLbl.text! += response.main.temp.description
-                self.windLbl.text! += response.wind.speed.description
+                self.tempLbl.text! = "Current temperature: " + response.main!.temp.description
+                self.windLbl.text! = "Wind speed: " + response.wind!.speed.description
             case .failure(let error):
 break
 //                self.present(UIAlertController.errorAlert(message: error.localizedDescription), animated: true)

@@ -9,7 +9,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
 window = UIWindow(windowScene: scene)
 let tbvc = UITabBarController()
-        tbvc.viewControllers = [TodoListVC()]
+        tbvc.viewControllers = [TodoListVC(), CurrentWeatherVC()]
         window?.rootViewController = tbvc
     window?.makeKeyAndVisible() 
     }

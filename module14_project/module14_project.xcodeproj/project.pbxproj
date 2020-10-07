@@ -84,6 +84,17 @@
 			path = TodoList;
 			sourceTree = "<group>";
 		};
+		ED2F159F252E0D12003C6361 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				EDFCF723252C49FB000B22E7 /* CurrentWeatherVC.swift */,
+				EDFCF726252C4A20000B22E7 /* CurrentWeatherGraphics.swift */,
+				EDFCF729252C4A50000B22E7 /* Weather.swift */,
+				EDFCF72C252C4A79000B22E7 /* WeatherService.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
 		EDDC996824FBE58400628A1D = {
 			isa = PBXGroup;
 			children = (
@@ -108,10 +119,7 @@
 				EDDC997424FBE58400628A1D /* AppDelegate.swift */,
 				EDDC997624FBE58400628A1D /* SceneDelegate.swift */,
 				EDDC997824FBE58400628A1D /* ViewController.swift */,
-				EDFCF723252C49FB000B22E7 /* CurrentWeatherVC.swift */,
-				EDFCF726252C4A20000B22E7 /* CurrentWeatherGraphics.swift */,
-				EDFCF729252C4A50000B22E7 /* Weather.swift */,
-				EDFCF72C252C4A79000B22E7 /* WeatherService.swift */,
+				ED2F159F252E0D12003C6361 /* Weather */,
 				ED1628D9252C4798002F4885 /* TodoList */,
 				EDDC997D24FBE58600628A1D /* Assets.xcassets */,
 				EDDC997F24FBE58600628A1D /* LaunchScreen.storyboard */,
