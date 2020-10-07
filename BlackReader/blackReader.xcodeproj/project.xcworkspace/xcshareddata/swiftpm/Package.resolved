@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BookKit",
+        "repositoryURL": "https://github.com/cyrmax/BookKit",
+        "state": {
+          "branch": "master",
+          "revision": "01ffae1fee6cf51803a7043fdf0cb5a23a025ae5",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
