@@ -43,6 +43,7 @@ let tf = UITextField()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+title = "Name"
         stack.addArrangedSubview(nameTF)
         stack.addArrangedSubview(lastnameTF)
         stack.addArrangedSubview(saveBtn)
