@@ -37,6 +37,7 @@ let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+title = "Weather"
         setupGraphics()
 
         if let cachedWeather = realm.objects(WeatherResponse.self).first {
