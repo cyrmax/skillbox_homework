@@ -5,6 +5,7 @@ import RealmSwift
 class TodoListVC: UITableViewController {
 let realm = try! Realm()
     var tasks: Results<TodoTask>!
+    var token: NotificationToken?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,6 +14,11 @@ let realm = try! Realm()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.rowHeight = 70
         tableView.reloadData()
+        token = realm.observe {
+ _, _ in
+            self.tableView.reloadData()
+        }
+
 let addBtn = UIButton()
         addBtn.translatesAutoresizingMaskIntoConstraints = false
         addBtn.setTitle("Add", for: .normal)
@@ -28,9 +34,7 @@ let addBtn = UIButton()
     }
 
     @objc func addNewTask() {
-        present(AddTaskVC(), animated: true) {
-            self.tableView.reloadData()
-        }
+        present(AddTaskVC(), animated: true)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

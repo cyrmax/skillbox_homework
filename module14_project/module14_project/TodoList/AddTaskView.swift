@@ -35,11 +35,7 @@ let btn = UIButton()
             nameTF.centerYAnchor.constraint(equalTo: guide.centerYAnchor),
         ])
 
-        nameTF.returnKeyType = .done
-        nameTF.enablesReturnKeyAutomatically = true
-        
         addBtn.addTarget(nil, action: #selector(AddTaskVC.addTask), for: .touchUpInside)
-        nameTF.addTarget(nil, action: #selector(AddTaskVC.addTask), for: .editingDidEnd)
     }
 
     override init(frame: CGRect) {
